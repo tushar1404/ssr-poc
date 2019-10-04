@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import ReactDOMServer from "react-dom/server"
-import resources from '../../app/resources'
+import resources from '../../app/resources.json'
 import { ChunkRegistryProvider, ChunkRegistry } from "../../app/utils/chunkManager"
 import {CriticalCSSProvider, StyleRegistry} from 'react-critical-css'
 import { StaticRouter } from 'react-router-dom'
