@@ -1,0 +1,25 @@
+.sidebar {
+    border-right: 1px solid #f0f0f0;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.row {
+    padding: 5px 20px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.row-cell {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 0;
+    text-transform: uppercase;
+
+    &:last-child {
+        text-align: right;
+    }
+}

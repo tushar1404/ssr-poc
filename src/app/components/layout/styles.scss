@@ -1,0 +1,25 @@
+.header {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0 20px;
+    background: #2f70a9;
+    color: #fff;
+}
+
+.main-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.content-container {
+    position: absolute;
+    left: 25%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+}
