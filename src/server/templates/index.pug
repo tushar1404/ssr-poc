@@ -2,18 +2,21 @@ doctype html
 html(lang='en')
     meta(name="viewport",content="width=device-width, initial-scale=1")
     head
-        style !{styles}
+        != linkTags
+        != styleTags
+        style #{styles}
     body
         div(id='root', class='main') !{content}
-        each source in scripts
-          script(src=source, defer)
-        script.
-            var styleSheets = ["#{styleSheets}"];
-            var head = document.getElementsByTagName('head')[0];
-            styleSheets.map(function (v) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = v;
-            link.type = 'text/css';
-            head.appendChild(link);
-            });
+        //- each source in scripts
+        //-   script(src=source, defer)
+        != scriptTags
+        //- script.
+        //-     var styleSheets = ["#{styleSheets}"];
+        //-     var head = document.getElementsByTagName('head')[0];
+        //-     styleSheets.map(function (v) {
+        //-     var link = document.createElement('link');
+        //-     link.rel = 'stylesheet';
+        //-     link.href = v;
+        //-     link.type = 'text/css';
+        //-     head.appendChild(link);
+        //-     });

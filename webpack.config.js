@@ -3,6 +3,7 @@ const context = path.resolve(__dirname)
 const ManifestPlugin = require('webpack-manifest-plugin');
 const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const LoadablePlugin = require('@loadable/webpack-plugin')
 
 let config = [
     {
@@ -19,6 +20,7 @@ let config = [
             extensions: [".jsx", ".js", ".json", ".scss"]
         },
         plugins: [
+            new LoadablePlugin(),
             new MiniCssExtractPlugin({
                 filename: `[name].[hash].css`
               }),
@@ -40,6 +42,7 @@ let config = [
                             "@babel/preset-env",
                             "@babel/preset-react"],
                         plugins: [
+                            ["@loadable/babel-plugin"],
                             [
                                 "@babel/plugin-transform-runtime",
                                 {
@@ -96,8 +99,7 @@ let config = [
                             "@babel/preset-env",
                             "@babel/preset-react"],
                         plugins: [
-                            ["./lazy/plugin"],
-                            ["@babel/plugin-syntax-dynamic-import"],
+                            ["@loadable/babel-plugin"],
                             [
                                 "@babel/plugin-transform-runtime",
                                 {

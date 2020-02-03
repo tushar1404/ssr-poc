@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import styles from './styles'
 
 class Details extends Component {
     render(){
